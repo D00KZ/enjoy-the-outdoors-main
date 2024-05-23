@@ -2,9 +2,9 @@
 
 window.onload = function () {
   //Calling IDs
-  const locationDropDownResults = document.querySelector("#locationDropDownResults");
+
   const parkTypeDropDown = document.querySelector("#parkTypeDropDown");
-  const typeDropDownResults = document.querySelector("#typeDropDownResults");
+  
 
   //Creating Functions.
 
