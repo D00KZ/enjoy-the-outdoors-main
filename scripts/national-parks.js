@@ -52,9 +52,15 @@ window.onload = function () {
 
         let cell6 = row.insertCell(5);
         cell6.innerText = park.Phone;
+        if (park.Phone === 0) {
+          cell6.innerText = "No Contact"
+        }
 
         let cell7 = row.insertCell(6);
         cell7.innerText = park.Visit;
+          if (park.Visit === undefined) {
+            cell7.innerText = "No Website"
+          }
       }
     }
   }
@@ -101,9 +107,15 @@ window.onload = function () {
 
       let cell6 = row.insertCell(5);
       cell6.innerText = park.Phone;
+        if (park.Phone === 0) {
+          cell6.innerText = "No Contact"
+        }
 
       let cell7 = row.insertCell(6);
       cell7.innerText = park.Visit ;
+        if (park.Visit === undefined) {
+         cell7.innerText = "No Website"
+        }
     });
   }
 

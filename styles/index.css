@@ -180,20 +180,12 @@ table tr:hover {
   background: #f9f9f9;
 }
 
-/* Responsive design */
-@media (max-width: 48rem) {
-  main {
-    width: 95%;
-  }
-}
-
 /* General styles for the radio group */
 .radio-group {
   border: 0.125rem solid #ccc;
-  padding: 0.625rem;
+  padding: 0rem 0.5rem;
   border-radius: 0.3125rem;
   background-color: #f9f9f9;
-  width: 100%; 
 }
 
 /* Footer styles */
