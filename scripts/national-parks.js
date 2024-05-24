@@ -2,8 +2,12 @@
 
 window.onload = function () {
   //Calling IDs
-
-  const parkTypeDropDown = document.querySelector("#parkTypeDropDown");
+  const locationRadio = document.querySelector("#locationRadio");
+  const typeRadio = document.querySelector("#typeRadio");
+  const locationContainer = document.querySelector("#locationContainer");
+  const parkTypeContainer = document.querySelector("#parkTypeContainer");
+  const locationDropDownResults = document.querySelector("#locationDropDownResults");
+  const typeDropDownResults = document.querySelector("#typeDropDownResults");
   
 
   //Creating Functions.
@@ -103,14 +107,31 @@ window.onload = function () {
     });
   }
 
+  function searchTypeChanged() {
+    if (locationRadio.checked) {
+      locationDropDownResults.style.display = "block";
+      typeDropDownResults.style.display = "none";
+      locationContainer.style.display = "block";
+      parkTypeContainer.style.display = "none";
+    } else {
+      locationDropDownResults.style.display = "none";
+      typeDropDownResults.style.display = "block";
+      locationContainer.style.display = "none";
+      parkTypeContainer.style.display = "block";
+    }
+  }
 
-
+  // Initial call to set visibility
+  searchTypeChanged();
 
   // Event listeners to call functions
   document.querySelector("#locationDropDownResults").onclick = locationsInfoDisplay;
   document.querySelector("#typeDropDownResults").onclick = displayTypesOptions;
 
+  locationRadio.onchange = searchTypeChanged;
+  typeRadio.onchange = searchTypeChanged;
   // Populate dropdowns
   locationsOptions();
   typesOptions();
-};
+  searchTypeChanged();
+}

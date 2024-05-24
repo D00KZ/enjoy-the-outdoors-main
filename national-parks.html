@@ -5,23 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>National Parks</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
+    <header>
+      <header>
+        <div id="header-container">
+          <a href="mountains.html" class="nav-button">Mountains</a>
+          <div id="logo">
+            <a href="main.html">
+              <img src="images/Deer.png" alt="Logo" />
+            </a>
+          </div>
+          <a href="national-parks.html" class="nav-button">Discover National Parks</a>
+        </div>
+      </header>
+    </header>
     <main>
-      <h1>National Parks</h1>
+      <video autoplay loop muted playsinline>
+        <source src="video/videoplayback.mp4" type="video/mp4" />
+        <source src="video/videoplayback.webm" type="video/webm" />
+      </video>
+      <h2>National Parks</h2>
 
-      <label for="parkLocationsDropDown">Locations</label>
-      <select id="parkLocationsDropDown">
-        <option value="">Select...</option>
-      </select>
+      <fieldset class="radio-group">
+        <legend>Search</legend>
+        <div>
+          <input type="radio" name="searchType" id="locationRadio" checked />
+          <label for="locationRadio">By Location</label>
+        </div>
+        <div>
+          <input type="radio" name="searchType" id="typeRadio" />
+          <label for="typeRadio">By Type</label>
+        </div>
+      </fieldset>
+      <br />
+
+      <div id="locationContainer">
+        <label for="parkLocationsDropDown">Locations</label>
+        <select id="parkLocationsDropDown">
+          <option value="">Select...</option>
+        </select>
+      </div>
 
       <button type="button" id="locationDropDownResults">Show Locations</button>
 
-      <label for="parkTypeDropDown">Park Types</label>
-      <select id="parkTypeDropDown">
-        <option value="">Select...</option>
-      </select>
+      <div id="parkTypeContainer">
+        <label for="parkTypeDropDown">Park Types</label>
+        <select id="parkTypeDropDown">
+          <option value="">Select...</option>
+        </select>
+      </div>
 
       <button type="button" id="typeDropDownResults">Show Types</button>
 
@@ -40,6 +74,9 @@
         <tbody id="peoplesInfoBody"></tbody>
       </table>
     </main>
+    <footer>
+      <p>&copy; 2024 Christopher Dookie</p>
+    </footer>
     <script src="scripts/locationData.js"></script>
 
     <script src="scripts/parkTypeData.js"></script>

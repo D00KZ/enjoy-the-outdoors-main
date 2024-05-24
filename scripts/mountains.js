@@ -19,21 +19,17 @@ window.onload = function () {
     const selectedMountainName = mountainsListDropDown.value;
 
     // Clear previous display
-    mountainsListInfoDisplay.innerHTML = " ";
-    mountainsPhotoDisplay.innerHTML = " ";
+    mountainsListInfoDisplay.innerHTML = "";
+    mountainsPhotoDisplay.innerHTML = "";
 
     // Find the selected mountain
     const selectedMountain = mountainsArray.find((mountain) => mountain.name === selectedMountainName);
 
     if (selectedMountain) {
-      const mountainsPhotoDisplay = document.querySelector("#mountainsPhotoDisplay");
       // Create image element
       const imgElement = document.createElement("img");
-      imgElement.src = `images/${mountain.img}`;
-      imgElement.alt = selectedMountain.img;
-      // const img = document.createElement("img");
-      // img.src = `images/${mountain.img}`;
-      // img.alt = mountain.name;
+      imgElement.src = `images/${selectedMountain.img}`; // Corrected here
+      imgElement.alt = selectedMountain.name; // Corrected here
 
       // Create description element
       const descElement = document.createElement("p");
